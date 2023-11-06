@@ -21,6 +21,7 @@ func main() {
 	var b, f, s = true, 2.33, "lucky" //variables can also be declared in this way
 
 	othername := "Antonny" // with this you can declare your variables in a shorten name
+	firstname, lastname := "Simon", "Awiti"
 
 	x, y, z := 1, 2, 3
 
@@ -35,5 +36,6 @@ func main() {
 	fmt.Println(b, f, s)
 	fmt.Println(othername)
 	fmt.Println(sum)
+	fmt.Println(firstname + lastname)
 
 }

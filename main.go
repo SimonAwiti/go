@@ -8,9 +8,9 @@ func main() {
 	fmt.Println("Enter your age: ")
 	fmt.Scanf("%d", &age)
 
-	if age != 28 {
-		fmt.Println("verification failed")
+	if age == 28 {
+		fmt.Println("success!")
 	} else {
-		fmt.Println("Success")
+		fmt.Println("verification failed")
 	}
 }

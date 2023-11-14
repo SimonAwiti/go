@@ -3,14 +3,37 @@ package main
 import "fmt"
 
 func main() {
-	var age int
+	//fmt.Print("No new")
+	//fmt.Print("in print as compared to println")
+	//fmt.Println("prints an output in a new line")
 
-	fmt.Println("Enter your age: ")
-	fmt.Scanf("%d", &age)
+	name := "Simon"
+	age := 28
+	score := 1.999923
 
-	if age == 28 {
-		fmt.Println("success!")
-	} else {
-		fmt.Println("verification failed")
-	}
+	fmt.Println("mys name is ", name, " and I am ", age)
+
+	// formated string printf
+	// %v is a format specifier n it can be any letter
+
+	fmt.Printf("My name is %v and I am %v yeays old \n", name, age)
+
+	//%q prints quoted strings
+
+	fmt.Printf("my name is %q \n", name)
+
+	//printing floats
+
+	fmt.Printf("Your score is %f \n", score)
+
+	//rounding off floats
+
+	fmt.Printf("Your score rounded off to the nearest two is %0.2f", score)
+
+	//saving formated strigs
+
+	var str = fmt.Sprintf("My name is %v and I am %v yeays old \n", name, age)
+
+	fmt.Println(str)
+
 }

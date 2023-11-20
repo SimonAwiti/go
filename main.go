@@ -28,11 +28,18 @@ func main() {
 
 	//rounding off floats
 
-	fmt.Printf("Your score rounded off to the nearest two is %0.2f", score)
+	fmt.Printf("Your score rounded off to the nearest two is %0.2f \n", score)
 
 	//saving formated strigs
 
 	var str = fmt.Sprintf("My name is %v and I am %v yeays old \n", name, age)
+
+	time := 2.333
+	runner := "tim"
+
+	var sentence = fmt.Sprintf("it took %0.1f for %s to complete the race", time, runner)
+
+	fmt.Println(sentence)
 
 	fmt.Println(str)
 

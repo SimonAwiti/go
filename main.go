@@ -3,21 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	//arrays
-	var onlinestores [3]string = [3]string{"aws", "target", "alibaba"}
-	var scores [3]int = [3]int{23, 22, 21}
+	//arrays together with formated variables
 
-	fmt.Println(scores)
+	onlinestores := [3]string{"amazon", "target", "alibaba"}
 
-	//another way to declare an array
+	fmt.Printf("they like shopping at these %v online stores: %v \n", len(onlinestores), onlinestores)
 
-	var ages = [3]int{12, 15, 17}
+	statement := fmt.Sprintf("they like shopping at these %v online stores: %v \n", len(onlinestores), onlinestores)
 
-	fmt.Println(ages, len(ages), onlinestores)
+	fmt.Printf("The sister said that %v \n", statement)
 
-	//to shorten it all
-
-	trainers := [4]string{"Josh", "Simon", "ted", "Keziah"}
-
-	fmt.Println(trainers, len(trainers))
 }

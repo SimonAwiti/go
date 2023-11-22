@@ -3,14 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	//arrays together with formated variables
+	//slices: are like arrays but the no of vars not defined
 
-	onlinestores := [3]string{"amazon", "target", "alibaba"}
+	nba_teams := []string{"Boston", "Lakers", "GSW"}
 
-	fmt.Printf("they like shopping at these %v online stores: %v \n", len(onlinestores), onlinestores)
+	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
 
-	statement := fmt.Sprintf("they like shopping at these %v online stores: %v \n", len(onlinestores), onlinestores)
+	nba_teams = append(nba_teams, "76sers")
 
-	fmt.Printf("The sister said that %v \n", statement)
+	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
+
+	nba_teams = append(nba_teams, "SeaHawks")
+
+	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
+
+	fevteams := nba_teams[0:2]
+
+	fmt.Printf("He only know these %v NBA teams: %v but he likes these %v more %v\n", len(nba_teams), nba_teams, len(fevteams), fevteams)
 
 }

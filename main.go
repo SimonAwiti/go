@@ -1,24 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	//slices: are like arrays but the no of vars not defined
+	ingredients := []string{"meat", "cooking oil", "flour"}
 
-	nba_teams := []string{"Boston", "Lakers", "GSW"}
+	newstatement := "hello chef"
 
-	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
+	chef := "Simon"
 
-	nba_teams = append(nba_teams, "76sers")
+	fmt.Println(ingredients, chef)
 
-	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
+	ingredients = append(ingredients, "onions")
 
-	nba_teams = append(nba_teams, "SeaHawks")
+	fmt.Println(strings.Contains(newstatement, "onions"))
+	fmt.Println(strings.ReplaceAll(newstatement, "hello", "hi"))
 
-	fmt.Printf("He only know these %v NBA teams: %v \n", len(nba_teams), nba_teams)
+	statement := fmt.Sprintf("Chef %v used the %v ingredients to cook: %v ", chef, len(ingredients), ingredients)
 
-	fevteams := nba_teams[0:2]
-
-	fmt.Printf("He only know these %v NBA teams: %v but he likes these %v more %v\n", len(nba_teams), nba_teams, len(fevteams), fevteams)
+	fmt.Println(statement)
 
 }

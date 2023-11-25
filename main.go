@@ -2,24 +2,18 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	ingredients := []string{"meat", "cooking oil", "flour"}
+	nba_teams := []string{"Lakera", "Celtics", "Mavs", "Suns"}
 
-	newstatement := "hello chef"
+	nba_teams = append(nba_teams, "GSW")
 
-	chef := "Simon"
+	fev_teams := nba_teams[0:3]
 
-	fmt.Println(ingredients, chef)
+	nba_teams = append(nba_teams, "76sers")
 
-	ingredients = append(ingredients, "onions")
-
-	fmt.Println(strings.Contains(newstatement, "onions"))
-	fmt.Println(strings.ReplaceAll(newstatement, "hello", "hi"))
-
-	statement := fmt.Sprintf("Chef %v used the %v ingredients to cook: %v ", chef, len(ingredients), ingredients)
+	statement := fmt.Sprintf("He is familiar with all the %v teams: %v, but then he like these %v teams: %v ", len(nba_teams), nba_teams, len(fev_teams), fev_teams)
 
 	fmt.Println(statement)
 

@@ -5,13 +5,13 @@ import (
 )
 
 func main() {
-	x := 0
-	for x < 10 {
-		fmt.Println("The value is: ", x)
-		x++
-	}
-	for i := 1; i < 5; i++ {
-		fmt.Println("The value is: ", i)
+	nbateams := []string{"Boston", "Lakers", "Suns", "GSW", "Dallas"}
 
+	for i := 0; i < len(nbateams); i++ {
+		fmt.Println("The team is : ", nbateams[i])
+	}
+
+	for index, value := range nbateams {
+		fmt.Printf("The team in index %v is : %v \n", index, value)
 	}
 }
